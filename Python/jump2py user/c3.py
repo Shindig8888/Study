@@ -259,4 +259,4 @@ result = [x*y for x in range(2,10)
 print(result)
 
 #잘올라갔나?
-#잘올라갔나?????
+#잘올라갔나2
