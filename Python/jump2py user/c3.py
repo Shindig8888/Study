@@ -65,8 +65,10 @@ else:
     print('걸어가라')    
 
 #조건부 표현식
-    
+
+score = 100
 if score >=60:
+
     message = "success"
 else:
     message = "failure"
@@ -255,3 +257,5 @@ print(result)
 result = [x*y for x in range(2,10)
         for y in range(1,10)]
 print(result)
+
+#잘올라갔나?
