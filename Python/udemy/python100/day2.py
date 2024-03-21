@@ -1,2 +1,8 @@
-print("hellow")
-print("이게 보이면 pull 완료")
+print("Hey.")
+
+row = 4
+count = 1
+for i in range(0, row):
+  for j in range(0,i):
+    print(f"{count}", end= " ")
+    count+=1
