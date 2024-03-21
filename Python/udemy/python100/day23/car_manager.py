@@ -38,6 +38,12 @@ class CarManager:
             self.car_list[i-2].goto(self.car_list[i-3].xcor()+20, y)
             self.car_list[i-1].goto(self.car_list[i-2].xcor()+20, y)
             self.car_list[i].goto(self.car_list[i-1].xcor()+20, y)
+            
+    
+    def kill_car(self):
+        for car in self.car_list:
+            if car.xcor() <= -300:
+                car.hideturtle()
    
 
 

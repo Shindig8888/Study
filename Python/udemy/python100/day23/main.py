@@ -10,8 +10,8 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 screen.listen()
-screen.onkey(player.player_move, 'space') 
-
+screen.onkeypress(player.player_move, 'space') 
+scoreboard = Scoreboard()
 
 game_is_on = True
 car_list = []
@@ -23,14 +23,26 @@ while game_is_on:
     
     if round % 10==0:
         car.car_gen()
-        screen.update()
     car.car_connect()  
-    screen.update()
+    car.kill_car()
+
+    for cars in car.car_list:
+        if player.player.distance(cars.position()) < 20:
+            game_is_on = False 
+            scoreboard.gameover() 
     
     if player.level_up():
+        scoreboard.del_score()
         car.level += 1
+        scoreboard.score += 1
+        scoreboard.scoring()
+
+    screen.update()
+
+
     round+=1
     
+screen.exitonclick()
 
     
     
