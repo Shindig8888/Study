@@ -135,13 +135,13 @@ say_myself("박박박", 108)
 say_myself("박박김", 16, None)
 
 
-def say_myself(name, man=True, age): #parameter without a default follows parameter with a default: 초깃값이 있는 매개변수 뒤에 없는 매개변수가 위치할수없음
-    print(f"나의 이름은 {name}입니다.")
-    print(f"나이는 {age}살 입니다.")
-    if man:
-        print("남자입니다")
-    else:
-        print("여자입니다")
+# def say_myself(name, man=True, age): #parameter without a default follows parameter with a default: 초깃값이 있는 매개변수 뒤에 없는 매개변수가 위치할수없음
+#     print(f"나의 이름은 {name}입니다.")
+#     print(f"나이는 {age}살 입니다.")
+#     if man:
+#         print("남자입니다")
+#     else:
+#         print("여자입니다")
 
 #함수 안에서 선언한 변수의 효력 범위
         
