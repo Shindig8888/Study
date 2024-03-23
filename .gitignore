@@ -1,14 +1,16 @@
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\__pycache__\
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\.local\
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\.vscode\
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\game\
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\debug.py
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\foo.txt
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\myinfo.json
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\pop.py
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\test.py
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\test.txt
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\Untitled Diagram.drawio
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\wikidocs_12.html
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\새 파일.txt
-C:\Users\claix\OneDrive\Desktop\Coddimg\Study\없는 파일\
+game/
+.vscode/
+.local/
+.github/
+__pycache__/
+
+없는 파일
+새 파일.txt
+wikidocs_12.html
+Untitled Diagram.drawio
+test.txt
+test.py
+pop.py
+myinfo.json
+foo.txt
+debug.py
