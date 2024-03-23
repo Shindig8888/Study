@@ -80,7 +80,6 @@
 # else:
 #   print("Sorry, you have to grow taller before you can ride.")
 
-
 # print("Welcome to the rollercoaster!")
 # height = int(input("What is your height in cm? : "))
 # bill = 0
@@ -97,7 +96,7 @@
 #   elif age>=45 and age<=55:
 #     bill +=0
 #     print("Everything is going to be OK. Have a free ride on us!")
-    
+
 #   else:
 #     bill += 12
 #     print(f"Adult tickets are ${bill}")
@@ -134,10 +133,7 @@
 # elif love_score>40 and love_score<50:
 #   print(f"Your score is {love_score}, you are alright together.")
 # else:
-#   print(f"Your score is {love_score}.")  
-
-
-
+#   print(f"Your score is {love_score}.")
 
 print('''
 *******************************************************************************
@@ -164,35 +160,56 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 
 print("Welcome to Treasure Island.\nYour mission is to find the treasure.")
 
-
-lr = input("\nThere is a cross road in front of you. What direction should you go?\nleft or right: ").lower()
+lr = input(
+    "\nThere is a cross road in front of you. What direction should you go?\nleft or right: "
+).lower()
 
 if lr == "left":
-  
-  sw = input("\nYou walk down the road and faced in front of an unnamed lake. Would you swim or wait?\nswim or wait: ").lower()
+
+  sw = input(
+      "\nYou walk down the road and faced in front of an unnamed lake. Would you swim or wait?\nswim or wait: "
+  ).lower()
 
   if sw == "wait":
-    print("\nYou waited in front of lake. A fairy appeared and magically wraped you to a abandoned castle.")
-    rby = input("\nThere are 3 doors: Red, Blue and Yellow. What color of door would like you to choose?\nred, blue or yellow: ").lower()
-  
+    print(
+        "\nYou waited in front of lake. A fairy appeared and magically wraped you to a abandoned castle."
+    )
+    rby = input(
+        "\nThere are 3 doors: Red, Blue and Yellow. What color of door would like you to choose?\nred, blue or yellow: "
+    ).lower()
+
     if rby == "red":
-      print("\nYou opened the red door. Door shuts and FIRE EVERYWHERE!! You died. Try again\n\n*******************************************************************************")
+      print(
+          "\nYou opened the red door. Door shuts and FIRE EVERYWHERE!! You died. Try again\n\n*******************************************************************************"
+      )
     elif rby == "blue":
-      print("\nYou opened the blue door. Door shuts and ICE EVERYWHERE!! You died. Try again\n\n*******************************************************************************")
-    elif rby =="yellow":
-      print("\nYou opened the yellow door. There are a fortune of gold and jeweries EVERYWHER!! You won!!\n\n*******************************************************************************")
+      print(
+          "\nYou opened the blue door. Door shuts and ICE EVERYWHERE!! You died. Try again\n\n*******************************************************************************"
+      )
+    elif rby == "yellow":
+      print(
+          "\nYou opened the yellow door. There are a fortune of gold and jeweries EVERYWHER!! You won!!\n\n*******************************************************************************"
+      )
     else:
-      print("\nYou acted pretty stupid right there and fell over a rock. You died. Try again!\n\n*******************************************************************************")
-    
-  elif sw=="swim":
-    print("\nYou tried to swim acrss the lake but a giant lake-topus attacks you. You died. Try again!\n\n*******************************************************************************")
+      print(
+          "\nYou acted pretty stupid right there and fell over a rock. You died. Try again!\n\n*******************************************************************************"
+      )
+
+  elif sw == "swim":
+    print(
+        "\nYou tried to swim acrss the lake but a giant lake-topus attacks you. You died. Try again!\n\n*******************************************************************************"
+    )
   else:
-    print("\nYou acted pretty stupid right there and fell over a rock. You died. Try again!\n\n*******************************************************************************")
+    print(
+        "\nYou acted pretty stupid right there and fell over a rock. You died. Try again!\n\n*******************************************************************************"
+    )
 
 elif lr == "right":
-  print("\nYou stepped into a hole. You died. Try again!\n\n*******************************************************************************")
+  print(
+      "\nYou stepped into a hole. You died. Try again!\n\n*******************************************************************************"
+  )
 
 else:
-  print("\nYou acted pretty stupid right there and fell over a rock. You died. Try again!\n\n*******************************************************************************")
-
-
+  print(
+      "\nYou acted pretty stupid right there and fell over a rock. You died. Try again!\n\n*******************************************************************************"
+  )
