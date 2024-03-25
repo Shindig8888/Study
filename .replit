@@ -1,5 +1,5 @@
 modules = ["python-3.10:v18-20230807-322e88b"]
-run = "python3 Python/udemy/python100/day3.py"
+run = "python3 Python/udemy/python100/day4.py"
 
 [nix]
 channel = "stable-23_05"
