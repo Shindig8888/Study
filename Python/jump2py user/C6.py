@@ -10,3 +10,5 @@ def gugu(n):
 gugu2 = gugu(2)
 print(gugu2)
 
+import os
+list(os.walk("C:/"))
