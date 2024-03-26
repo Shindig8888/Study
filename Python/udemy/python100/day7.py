@@ -97,6 +97,9 @@ while True:
     if guess not in letters:
       print("\n한글자의 알파벳으로 답해주세요!")
       continue
+    if guess in target_list:
+      print(f"\n{guess}는 이미 맞춘 알파벳입니다!")
+      continue
   #입력검정   
     if guess in target_word:
      print("\n맞췄습니다!")
