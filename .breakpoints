@@ -1,0 +1,30 @@
+{
+  "files": {
+    "Python/udemy/python100/day6.py": [
+      {
+        "id": "424326ed-d8e3-469c-a4f3-8b9971be76a1",
+        "line": 1,
+        "version": 81,
+        "index": 0
+      },
+      {
+        "id": "495211e6-b753-4028-b074-52e55b641108",
+        "line": 2,
+        "version": 81,
+        "index": 15
+      },
+      {
+        "id": "b91c9c0c-5339-45d9-864b-5366b711f1fe",
+        "line": 3,
+        "version": 81,
+        "index": 33
+      },
+      {
+        "id": "757ad18a-a6f1-487d-9aa7-fe8bff3fc17a",
+        "line": 5,
+        "version": 81,
+        "index": 49
+      }
+    ]
+  }
+}
