@@ -1,8 +1,8 @@
 #다시하기 함수 정의
 def try_again():
   import sys
-  sys.path.append('C:\\Users\\claix\\OneDrive\\Desktop\\codes\\Study\\miniproject\\Hangman')
-  from clear_windows import clear_screen
+  sys.path.append('C:\\Users\\claix\\OneDrive\\Desktop\\codes\\Study')
+  from miniproject.Hangman.clear_windows import clear_screen
   
   while True:
         try_answer = input(" \n다시 하시겠습니까? (Y/N): ").lower()

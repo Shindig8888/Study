@@ -1,11 +1,11 @@
 #필요 모듈 import
 import sys
-sys.path.append('C:\\Users\\claix\\OneDrive\\Desktop\\codes\\Study\\miniproject\\Hangman')
+sys.path.append('C:\\Users\\claix\\OneDrive\\Desktop\\codes\\Study')
 import random
 
-import hang_list #행맨 아스키아트, 퀴즈단어리스트, 알파벳리스트
-from try_again import try_again #다시하기 모듈
-from clear_windows import clear_screen #윈도우즈용 클리어 모듈
+from miniproject.Hangman import hang_list #행맨 아스키아트, 퀴즈단어리스트, 알파벳리스트
+from miniproject.Hangman.try_again import try_again #다시하기 모듈
+from miniproject.Hangman.clear_windows import clear_screen #윈도우즈용 클리어 모듈
 
 #게임 루프시작
 while True:
