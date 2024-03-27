@@ -42,31 +42,3 @@ while True:
     break
 
 print("\n\n카이사르 암호 생성기를 이용해주셔서 감사합니다!")
-
-# def c_incode(encode_list, shift):
-#   encripted_list = []
-#   for letter in encode_list:
-#     if letter in alphabet:
-#       position = (alphabet.index(letter) + shift)
-#       encripted_list.append(alphabet[position])
-#     else:
-#       encripted_list.append(letter)
-#   return ''.join(encripted_list)
-
-# def c_decode(decode_list, shift_amount):
-#   decripted_list = []
-#   for letter in decode_list:
-#     if letter in alphabet:
-#       position2 = (alphabet.index(letter) - shift_amount)
-#       decripted_list.append(alphabet[position2])
-#     else:
-#       decripted_list.append(letter)
-
-#   return ''.join(decripted_list)
-
-# if direction == 'encode':
-#   print(c_incode(list(text), shift))
-# elif direction == 'decode':
-#   print(c_decode(list(text), shift))
-# else:
-#   print("Please input valid command.")
