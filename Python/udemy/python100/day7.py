@@ -57,7 +57,7 @@ stages = ['''
       |
 =========
 ''']
-
+    
 #다시하기 함수 정의
 def try_again():
   while True:
