@@ -1,5 +1,43 @@
 {
   "files": {
+    "Python/udemy/python100/day13.py": [
+      {
+        "id": "d1bfe22d-e101-496e-9345-28d3ea23a244",
+        "line": 3,
+        "version": 4,
+        "index": 44
+      },
+      {
+        "id": "32931c20-39ac-42cb-a871-d79885a271c1",
+        "line": 4,
+        "version": 4,
+        "index": 63
+      },
+      {
+        "id": "42eb4229-43cb-4604-9067-733026c33291",
+        "line": 5,
+        "version": 4,
+        "index": 82
+      },
+      {
+        "id": "4679e78a-8c16-4e00-a7f0-48380b4ea286",
+        "line": 6,
+        "version": 4,
+        "index": 107
+      },
+      {
+        "id": "b465ab01-f0b5-4557-94eb-0317f968009b",
+        "line": 7,
+        "version": 4,
+        "index": 123
+      },
+      {
+        "id": "535fe6e1-c17d-43d5-aa01-7878cd6fdb34",
+        "line": 8,
+        "version": 4,
+        "index": 149
+      }
+    ],
     "Python/udemy/python100/day6.py": [
       {
         "id": "424326ed-d8e3-469c-a4f3-8b9971be76a1",
