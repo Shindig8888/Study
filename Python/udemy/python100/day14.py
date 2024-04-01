@@ -1,6 +1,6 @@
 import data #리스트들
-# from replit import clear #리플렛_클리어
-from clear_windows import clear_screen
+from replit import clear #리플렛_클리어
+# from clear_windows import clear_screen
 
 def gen_random_person(dic_list, end):
     import random
@@ -45,7 +45,7 @@ def q_try_again():
         else:
             continue#다시하기 질문
 
-clear_screen()
+clear()
 print("\nWelcome to Higher Lower!\n\nGuess who's follower is higher or lower!") #greetings
 end = False
 while True:
