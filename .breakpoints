@@ -4,38 +4,58 @@
       {
         "id": "d1bfe22d-e101-496e-9345-28d3ea23a244",
         "line": 3,
-        "version": 4,
+        "version": 237,
         "index": 44
       },
       {
         "id": "32931c20-39ac-42cb-a871-d79885a271c1",
         "line": 4,
-        "version": 4,
+        "version": 237,
         "index": 63
       },
       {
         "id": "42eb4229-43cb-4604-9067-733026c33291",
         "line": 5,
-        "version": 4,
-        "index": 82
+        "version": 237,
+        "index": 84
       },
       {
         "id": "4679e78a-8c16-4e00-a7f0-48380b4ea286",
         "line": 6,
-        "version": 4,
-        "index": 107
+        "version": 237,
+        "index": 111
       },
       {
         "id": "b465ab01-f0b5-4557-94eb-0317f968009b",
         "line": 7,
-        "version": 4,
-        "index": 123
+        "version": 237,
+        "index": 129
       },
       {
         "id": "535fe6e1-c17d-43d5-aa01-7878cd6fdb34",
         "line": 8,
-        "version": 4,
-        "index": 149
+        "version": 237,
+        "index": 157
+      }
+    ],
+    "Python/udemy/python100/day14.py": [
+      {
+        "id": "fd29cf23-ace6-4898-8146-1256001e55db",
+        "line": 34,
+        "version": 1916,
+        "index": 848
+      },
+      {
+        "id": "8ddb1229-6033-4ba3-a283-e1d6d0a99cb5",
+        "line": 35,
+        "version": 1916,
+        "index": 860
+      },
+      {
+        "id": "01dd6344-23a9-48b7-83da-936dbbb038f4",
+        "line": 36,
+        "version": 1916,
+        "index": 876
       }
     ],
     "Python/udemy/python100/day6.py": [
