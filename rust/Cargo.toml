@@ -1,9 +1,0 @@
-workspace = { members = [ "rust_book","rust_book/Chapter2", "rust_book/book_chapter2", "rust_book/book_chapter3", "rust_book/chapter2"] }
-[package]
-name = "rust"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
