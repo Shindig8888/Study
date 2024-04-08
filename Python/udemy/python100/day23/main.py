@@ -10,7 +10,8 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 screen.listen()
-screen.onkeypress(player.player_move, 'space') 
+screen.onkeypress(player.player_move, 'Up') 
+screen.onkeypress(player.player_back, 'Down') 
 scoreboard = Scoreboard()
 
 game_is_on = True
@@ -34,8 +35,7 @@ while game_is_on:
     if player.level_up():
         scoreboard.del_score()
         car.level += 1
-        scoreboard.score += 1
-        scoreboard.scoring()
+        scoreboard.update_scoreboard()
 
     screen.update()
 

@@ -25,6 +25,12 @@ class Scoreboard:
     def del_score(self):
         self.score_writer.clear()
 
+    def update_scoreboard(self):
+        self.score_writer.clear()
+        self.score += 1
+        self.score_writer.write(f"LEVEL {self.score}", False, "left", FONT)
+
+
     def gameover(self):
         self.score_writer.goto(0,0)
         self.score_writer.write("GAMEOVER", False, "center", FONT)

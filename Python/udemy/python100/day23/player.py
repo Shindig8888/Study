@@ -21,6 +21,9 @@ class Player:
     def player_move(self):
         self.player.setheading(90)
         self.player.forward(MOVE_DISTANCE)
+    def player_back(self):
+        self.player.setheading(270)
+        self.player.forward(MOVE_DISTANCE)
 
     def level_up(self):
         if self.player.ycor() == FINISH_LINE_Y:
