@@ -7,5 +7,9 @@ name = "book_chapter3"
 version = "0.1.0"
 
 [[package]]
+name = "book_chapter8"
+version = "0.1.0"
+
+[[package]]
 name = "rust_book"
 version = "0.1.0"

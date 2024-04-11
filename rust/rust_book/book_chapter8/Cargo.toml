@@ -1,6 +1,5 @@
-workspace = { members = ["book_chapter3", "book_chapter8"] }
 [package]
-name = "rust_book"
+name = "book_chapter8"
 version = "0.1.0"
 edition = "2021"
 
