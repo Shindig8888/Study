@@ -1,0 +1,1 @@
+C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_udemy\sction2\target\debug\sction2.exe: C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_udemy\sction2\src\lib.rs C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_udemy\sction2\src\main.rs
