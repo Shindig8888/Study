@@ -38,14 +38,11 @@
 
 fn main() {
     let s = String::from("hello");
-    // let mut chars = s.chars(); // 문자열을 문자 이터레이터로 변환
+    let mut chars = s.chars(); // 문자열을 문자 이터레이터로 변환
 
-    let mut chars = s.chars().nth(1);
-    println!("{:?}", chars);
-
-    // if let Some(second_char) = chars.nth(1) {
-    //     println!("The second character is: {}", second_char);
-    // } else {
-    //     println!("The string has less than two characters");
-    // }
+    if let Some(second_char) = chars.nth(1) {
+        println!("The second character is: {}", second_char);
+    } else {
+        println!("The string has less than two characters");
+    }
 }
