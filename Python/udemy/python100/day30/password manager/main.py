@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 from genpass import gen_pass
 import pyperclip
+import json
 
 TWO_COLUMN_WIDTH = 36
 ONE_COLUMN_WIDTH = 20
@@ -20,7 +21,12 @@ def save_password():
     input_username = entry_username.get()
     input_password = entry_password.get()
 
-    input_data = f"{input_website} | {input_username} | {input_password}\n"
+    new_data = {
+        input_website:{
+            "email": input_username, 
+            "password": input_password,
+            }
+        }
     input_list = {'Website':input_website, 'Email':input_username, 'Password':input_password}
     empty_list = []
     for (key, value) in input_list.items():
@@ -35,10 +41,41 @@ def save_password():
         is_ok = messagebox.askokcancel(title=input_website, message=f'These are the details entered:\n\nEmail: {input_username}\nPassword: {input_password}\nIs it ok to save?')
     
     if is_ok==True:
-        with open('data.txt', 'a') as data:
-            data.write(input_data)
-        entry_website.delete(0, END)
-        entry_password.delete(0, END)
+        try:
+            with open('data.json', 'r') as data:
+                json_data = json.load(data)
+        except (ValueError, FileNotFoundError):
+            with open('data.json', 'w') as data:
+                json.dump(new_data, data, indent = 4)
+        else:
+            json_data.update(new_data)
+            with open('data.json', 'w') as data:
+                json.dump(json_data, data, indent = 4)
+        finally:
+            entry_website.delete(0, END)
+            entry_password.delete(0, END)
+
+# ---------------------------- PASSWORD Finder ------------------------------- #
+
+def password_search():
+    try:
+        with open('data.json', 'r') as file_data:
+            json_dictionary = json.load(file_data)
+            keyword = entry_website.get().title()
+    except FileNotFoundError:
+        messagebox.showerror(title='error!', message=f"No file available. Please enter at least one data.")
+    else:
+        if keyword in json_dictionary:
+            information_website = json_dictionary[keyword]
+            entry_username.delete(0, END)
+            entry_password.delete(0, END)
+            entry_username.insert(0, information_website['email'])
+            entry_password.insert(0, information_website['password'])
+            pyperclip.copy(information_website['password'])
+            messagebox.showinfo("Search Success", f"Your password for {keyword} : {information_website['password']} \nhas been copied to your clipboard.\n\nCtrl+V to paste.")
+        else:
+            messagebox.showerror(title='error!', message=f"You don't have any saved data on {keyword}")
+
 # ---------------------------- UI SETUP ------------------------------- #
 #window
 window = Tk()
@@ -56,9 +93,13 @@ label_website = Label(text = "Website:")
 label_website.grid(column=0,row=1)
 
 #entry "Website"
-entry_website = Entry(width=TWO_COLUMN_WIDTH)
+entry_website = Entry(width=ONE_COLUMN_WIDTH)
 entry_website.focus()
-entry_website.grid(column=1, row=1, columnspan=2)
+entry_website.grid(column=1, row=1)
+
+#button "Website search"
+website_search_button = Button(highlightthickness=0, width=14, text= "Search", command = password_search)
+website_search_button.grid(column=2, row=1)
 
 
 #label "Email/Username"
