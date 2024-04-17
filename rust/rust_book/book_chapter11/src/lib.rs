@@ -130,26 +130,35 @@
 // cargo test -- --test-threads=1: 병렬처리 제어
 
 //함수 출력 표시하기
-fn print_and_returns_10(a:i32)->i32 {
-    println!("I got the value {}", a);
-    10
-}
+// fn print_and_returns_10(a:i32)->i32 {
+//     println!("I got the value {}", a);
+//     10
+// }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
 
-    #[test]
-    fn this_test_will_pass() {
-        let value = print_and_returns_10(4);
-        assert_eq!(10, value);
-    }
+//     #[test]
+//     fn this_test_will_pass() {
+//         let value = print_and_returns_10(4);
+//         assert_eq!(10, value);
+//     }
 
-    #[test]
-    fn this_test_will_fail() {
-        let value = print_and_returns_10(8);
-        assert_eq!(5, value);
-    }
-}
+//     #[test]
+//     fn this_test_will_fail() {
+//         let value = print_and_returns_10(8);
+//         assert_eq!(5, value);
+//     }
+// }
 
 //cargo test this_test_will_fail 처럼 이름을 지정해서 실행 가능
+//[test] 아래에 [ignore]추가, cargo test -- --ignored 명령어 사용하면 무시된것만, cargo test -- --include-ignored 실행하면 모든 테스트
+
+//테스트 조직화
+//유닛테스트: src 디렉터리 내 각 파일에 테스트 대상이 될 코드와 함께 작성
+//통합테스트는 [cfg(test)] 가 필요없음
+//테스트 경로에 대해서는 301쪽 확인
+//통합 테스트에서는 use root 사용, 모듈 분리 가능
+
+//바이너리 크레이트에서는 함수노출이 불가능
