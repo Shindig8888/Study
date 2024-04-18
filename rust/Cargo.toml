@@ -1,4 +1,4 @@
-workspace = { members = [ "rust_book","rust_book/Chapter2", "rust_book/book_chapter2", "rust_book/book_chapter3", "rust_book/chapter2", "rust_udemy/sction2", "rust_udemy/section3", "rust_udemy/section4", "rust_udemy/section5", "rust_udemy/ultimate_rust_crash_course/exercise/a_variables/variables", "rust_udemy/ultimate_rust_crash_course/hello"] }
+workspace = { members = [ "rust_book","rust_book/Chapter2", "rust_book/book_chapter2", "rust_book/book_chapter3", "rust_book/chapter2", "rust_udemy/sction2", "rust_udemy/section3", "rust_udemy/section4", "rust_udemy/section5", "rust_udemy/section6", "rust_udemy/ultimate_rust_crash_course/exercise/a_variables/variables", "rust_udemy/ultimate_rust_crash_course/hello"] }
 [package]
 name = "rust"
 version = "0.1.0"
