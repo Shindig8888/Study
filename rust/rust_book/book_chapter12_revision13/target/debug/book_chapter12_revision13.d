@@ -1,0 +1,1 @@
+C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_book\book_chapter12_revision13\target\debug\book_chapter12_revision13.exe: C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_book\book_chapter12_revision13\src\lib.rs C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_book\book_chapter12_revision13\src\main.rs
