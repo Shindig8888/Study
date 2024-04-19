@@ -28,6 +28,20 @@ pub mod utils {
 
     /// Combines two primary colors in equal amounts to create
     /// a secondary color.
+    /// # Examples
+    ///
+    /// '''
+    /// use color_practice_shindig::kinds::PrimaryColor;
+    /// use color_practice_shindig::utils::mix;
+
+    /// fn main() {
+    ///     let x = PrimaryColor::Red;
+    ///     let y = PrimaryColor::Blue;
+    ///     let z = mix(x, y);
+
+    ///     println!("{:?}", z.unwrap())
+    /// }
+    /// '''
     pub fn mix(c1: PrimaryColor, c2: PrimaryColor) -> Result<SecondaryColor, io::Error> {
         match (c1, c2) {
             (PrimaryColor::Red, PrimaryColor::Yellow) => Ok(SecondaryColor::Orange),

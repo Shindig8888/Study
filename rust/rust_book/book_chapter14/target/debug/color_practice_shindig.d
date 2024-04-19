@@ -1,0 +1,1 @@
+C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_book\book_chapter14\target\debug\color_practice_shindig.exe: C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_book\book_chapter14\src\lib.rs C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_book\book_chapter14\src\main.rs
