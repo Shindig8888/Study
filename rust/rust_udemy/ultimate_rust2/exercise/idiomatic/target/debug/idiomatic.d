@@ -1,0 +1,1 @@
+C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_udemy\ultimate_rust2\exercise\idiomatic\target\debug\idiomatic.exe: C:\Users\claix\OneDrive\Desktop\codes\Study\rust\rust_udemy\ultimate_rust2\exercise\idiomatic\src\main.rs
