@@ -1,5 +1,5 @@
-use book_chapter14::kinds::PrimaryColor;
-use book_chapter14::utils::mix;
+use color_practice_shindig::kinds::PrimaryColor;
+use color_practice_shindig::utils::mix;
 
 fn main() {
     let x = PrimaryColor::Red;
