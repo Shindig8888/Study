@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"book_chapter14":[["impl Freeze for <a class=\"enum\" href=\"book_chapter14/kinds/enum.PrimaryColor.html\" title=\"enum book_chapter14::kinds::PrimaryColor\">PrimaryColor</a>",1,["book_chapter14::kinds::PrimaryColor"]],["impl Freeze for <a class=\"enum\" href=\"book_chapter14/kinds/enum.SecondaryColor.html\" title=\"enum book_chapter14::kinds::SecondaryColor\">SecondaryColor</a>",1,["book_chapter14::kinds::SecondaryColor"]]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
