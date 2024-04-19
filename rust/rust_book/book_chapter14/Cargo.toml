@@ -1,7 +1,7 @@
 [workspace]
 [package]
 name = "color_practice_shindig"
-license = "MIT OR Apache-2.0"
+license = "MIT"
 description = "A color mix practice from Rust Programming Official Guide."
 version = "0.1.0"
 edition = "2021"
