@@ -1,0 +1,17 @@
+[workspace]
+[package]
+name = "color_practice_shindig"
+license = "MIT"
+description = "A color mix practice from Rust Programming Official Guide."
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
