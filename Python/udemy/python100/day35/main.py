@@ -3,8 +3,8 @@ from datetime import datetime as dt
 import json
 from twilio.rest import Client
 
-account_sid = "AC565f15f515bb34c6240ff6815d0a8f2d"
-auth_token = "464411313bc035473019e8b5996b13a3"
+account_sid = 
+auth_token = 
 
 LAT = 37.50494289803385
 LONG = 126.94782832030906
