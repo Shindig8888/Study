@@ -67,12 +67,12 @@ if uprise >= 5.0:
 elif uprise <= -5.0:
     sms_stock = f"{STOCK}: 🔻{round(uprise, 2)}%"
 
-client = Client("AC565f15f515bb34c6240ff6815d0a8f2d", "464411313bc035473019e8b5996b13a3")
+client = Client()
 for n in range(0, len(news_headline)):
     message = client.messages.create(
         body=f"{sms_stock}\nHeadline: {news_headline[n]}\nBrief: {news_brief[n]}",
-        from_="+12513330579",
-        to="+821033393818"
+        from_=
+        to="
     )
 ## STEP 3: Use https://www.twilio.com
 # Send a seperate message with the percentage change and each article's title and description to your phone number. 
