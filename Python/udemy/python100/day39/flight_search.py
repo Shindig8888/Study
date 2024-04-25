@@ -29,7 +29,12 @@ class FlightSearch:
                 "date_from": self.date_from,
                 "date_to": self.date_to,
                 "curr": self.CURRENCY,
-                "price_to": str(max_price_list[number])
+                "price_from": "150000",
+                "price_to": str(max_price_list[number]),
+                "nights_in_dst_from": 7,
+                "nights_in_dst_to": 28,
+                "one_for_city": 1,
+                "max_stopovers": 0
             }
                 
             
