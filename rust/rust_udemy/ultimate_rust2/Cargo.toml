@@ -1,3 +1,3 @@
 [workspace]
-members = [ "closure", "documentation", "example/*", "exercise/*" ]
+members = [ "closure", "commontraits", "documentation", "example/*", "exercise/*" ]
 resolver = "2"
