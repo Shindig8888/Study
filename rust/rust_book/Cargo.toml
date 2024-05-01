@@ -1,4 +1,4 @@
-workspace = { members = [ "book_chapter10", "book_chapter11", "book_chapter12", "book_chapter12_revision13", "book_chapter13", "book_chapter14", "book_chapter15", "book_chapter16", "book_chapter17", "book_chapter18","book_chapter3", "book_chapter8", "book_chapter9"] }
+workspace = { members = [ "book_chapter10", "book_chapter11", "book_chapter12", "book_chapter12_revision13", "book_chapter13", "book_chapter14", "book_chapter15", "book_chapter16", "book_chapter17", "book_chapter18", "book_chapter19","book_chapter3", "book_chapter8", "book_chapter9"] }
 [package]
 name = "rust_book"
 version = "0.1.0"
