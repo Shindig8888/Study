@@ -1,0 +1,41 @@
+body {
+    background-color: #75A47F;
+    
+}
+
+hr {
+    border-style: none;
+    border-top-style: dashed;
+    height: 0px;
+    width: 5%;
+    background-color: 75A47F;
+    border-color: gray;
+    border-width: 3px;
+
+}
+
+h1 {
+    color: #FCFFE0;
+}
+
+h3 {
+    color: #F5DAD2;
+}
+
+
+/* one element can have more than 1 class */
+.tangsu:hover {
+    border-radius: 20%;
+    
+}
+
+.edu /*=>h1*/ {
+    color: aqua;
+}
+
+/* id is unique */
+#educations /*=>h1, edu*/ {
+    color: black;
+}
+
+/* 우선순위: tag-attatched > inner > id > class > tag */
