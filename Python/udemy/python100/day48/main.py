@@ -25,15 +25,19 @@ buyTime_machine = driver.find_element(By.ID, value="buyTime machine")
 buyElder_Pledge = driver.find_element(By.ID, value="buyElder Pledge")
 
 
-timeout = time.time()+0.5
+timeout = time.time()+1
 
 
 while True:
     currenttime = time.time()
     cookie.click()
-    money = int(driver.find_element(By.ID, value="money").text)
+    try:
+        money = float(driver.find_element(By.ID, value="money").text.strip())
+    except:
+        continue
+    
 
-    if time.time() > timeout:
+    if time.time() > timeout + 1:
         try:
             if money >= 123_456_789:
                 buyTime_machine.click()
@@ -61,5 +65,5 @@ while True:
                 continue
         except:
             continue
-        timeout = time.time() + 0.5
+        timeout = time.time() + 1
     # time.sleep(0.01)
