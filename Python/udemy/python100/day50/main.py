@@ -27,48 +27,49 @@ login_button = driver.find_element(By.XPATH, value='//*[@id="q-766335200"]/div/d
 login_button.click()
 
 time.sleep(2)
-iframe_element = driver.find_element(By.XPATH, '//iframe[@title="Google 계정으로 로그인 버튼"]')
-driver.switch_to.frame(iframe_element)
+# iframe_element = driver.find_element(By.XPATH, '//iframe[@title="Google 계정으로 로그인 버튼"]')
+# driver.switch_to.frame(iframe_element)
 
-driver.get(iframe_element.get_attribute("src"))
+# print(iframe_element.get_attribute("src"))
 
-# 다시 메인 프레임으로 전환
-driver.switch_to.default_content()
-
-
-# facebook_login_button = driver.find_element(By.XPATH, '//*[@id="q1800251020"]/div/div[1]/div/div[1]/div/div/div[2]/div[2]/span/div[2]/button')
-# time.sleep(2)
-# facebook_login_button.click()
-
-# base_window = driver.window_handles[0]
-# facebook_login_window = driver.window_handles[1]
-# driver.switch_to.window(facebook_login_window)
-
-# time.sleep(2)
+# # 다시 메인 프레임으로 전환
+# driver.switch_to.default_content()
 
 
-# email_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="email"]')))
-# email_input.send_keys(EMAIL)
-# password_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="pass"]')))
-# password_input.send_keys(PASSWORD)
-# password_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="pass"]')))
-# password_input.send_keys(Keys.ENTER)
+facebook_login_button = driver.find_element(By.XPATH, '//*[@id="q1800251020"]/div/div[1]/div/div[1]/div/div/div[2]/div[2]/span/div[2]/button')
+time.sleep(2)
+facebook_login_button.click()
 
-# time.sleep(10)
+time.sleep(2)
+base_window = driver.window_handles[0]
+facebook_login_window = driver.window_handles[1]
+driver.switch_to.window(facebook_login_window)
 
-# facebook_final_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".select")))
-# time.sleep(10)
-# facebook_final_button.click()
+time.sleep(2)
 
-# time.sleep(10)
 
-# driver.switch_to.window(base_window)
+email_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="email"]')))
+email_input.send_keys(EMAIL)
+password_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="pass"]')))
+password_input.send_keys(PASSWORD)
+password_input = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="pass"]')))
+password_input.send_keys(Keys.ENTER)
 
 
 
-# location_confirm = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="q1800251020"]/div/div[1]/div/div/div[3]/button[1]')))
-# location_confirm.click()
+facebook_final_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".select")))
+time.sleep(10)
+facebook_final_button.click()
 
-# time.sleep(2000000000)
+time.sleep(10)
+
+driver.switch_to.window(base_window)
+
+time.sleep(5)
+
+location_confirm = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
+location_confirm.click()
+
+# # time.sleep(2000000000)
 
 
