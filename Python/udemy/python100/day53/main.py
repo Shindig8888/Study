@@ -7,10 +7,13 @@ from selenium.webdriver.support import expected_conditions as EC
 import undetected_chromedriver as uc
 from pprint import pprint
 from selenium.common.exceptions import ElementClickInterceptedException
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import TimeoutException
 from dotenv import load_dotenv
 import os
 from bs4 import BeautifulSoup
 import requests
+import json
 
 load_dotenv()
 EMAIL = os.getenv("EMAIL")
@@ -105,7 +108,7 @@ class RoomCapture():
         favorites.click()
         time.sleep(0.3)
 
-        last_page= self.driver.find_element(By.XPATH, value='/html/body/div[1]/div/div/div/div[2]/button[8]')
+        last_page= self.driver.find_element(By.XPATH, value='//*[@id="content"]/div/div/div[2]/button[9]')
         last_page.click()
         time.sleep(0.5)
         pages = self.driver.find_elements(By.CSS_SELECTOR, value='.styled__PageBtn-d24fjp-2')
@@ -118,36 +121,90 @@ class RoomCapture():
         room_url_list = []
         for page_number in range(1,full_length+1):
             rooms = self.driver.find_elements(By.CSS_SELECTOR, value='.styled__Card-lyqclu-0 a')
+            
             room_url_list += [str(url.get_attribute('href')) for url in rooms]
 
             if page_number==full_length:
                 break
-            
+            time.sleep(0.5)
+
+            WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="content"]/div/div/div[2]/button[8]')))
             button_clicker = self.driver.find_element(By.XPATH, value=f'//button[text()="{page_number+1}"]')
             button_clicker.click()
             time.sleep(0.5)
-
         self.url_list = room_url_list
 
     def collecting_information(self):
+        timeout_urls = []
         for url in self.url_list:
-            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'styled__ListContent-mttebe-1')))
-            self.driver.get(f"{url}")
-            price = self.driver.find_element(By.CSS_SELECTOR, value='.styled__ListContent-mttebe-1').text
-            print(price)
-            self.price_per_month_list.append(price)
-            address = self.driver.find_element(By.CSS_SELECTOR, value='.styled__Address-ze8x26-1').text
-            self.address_list.append(address)
+            try:
+                self.driver.get(f"{url}")
+                WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, 'styled__ListContent-mttebe-1')))
+                # time.sleep(0.7)
+                price = self.driver.find_element(By.CSS_SELECTOR, value='.styled__ListContent-mttebe-1').text
+                print(price)
+                self.price_per_month_list.append(price)
+                address = self.driver.find_element(By.CSS_SELECTOR, value='.styled__Address-ze8x26-1').text
+                self.address_list.append(address)
+            except TimeoutException:
+                timeout_urls.append(url)
+
+        for url in timeout_urls:
+            self.url_list.remove(url)
+
+    def to_spread_sheet(self):
+        with open('data.json', 'r', encoding='utf-8') as json_file:
+            data = json.load(json_file)
+
+        price_list = data['price']
+        address_list = data['address']
+        url_list = data['url']
+
+        for n in range(0, len(price_list)-1):
+            self.driver.get("https://forms.gle/UxQYHY3AGaDPyRUW7")
+            WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div[2]/textarea')))
             
+            price_input = self.driver.find_element(By.XPATH, value='//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div[2]/textarea')
+            price_input.send_keys(price_list[n])
+
+            address_input = self.driver.find_element(By.XPATH, value='//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div[2]/textarea')
+            address_input.send_keys(address_list[n])
+            
+            url_input = self.driver.find_element(By.XPATH, value='//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[1]/div[2]/textarea')
+            url_input.send_keys(url_list[n])
+
+            submit_button = self.driver.find_element(By.XPATH, value='//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div')
+            submit_button.click()
 
 
         
 
 room_finder = RoomCapture()
+
+
+
 room_finder.login()
-# room_finder.favorite_collector()
+room_finder.favorite_collector()
 room_finder.url_collector()
-pprint(room_finder.url_list)
 room_finder.collecting_information()
+pprint(room_finder.url_list)
 pprint(room_finder.address_list)
 pprint(room_finder.price_per_month_list)
+
+
+pprint(len(room_finder.url_list))
+pprint(len(room_finder.address_list))
+pprint(len(room_finder.price_per_month_list))
+
+
+data = {
+    "address" : room_finder.address_list,
+    "price" : room_finder.price_per_month_list,
+    "url" : room_finder.url_list
+}
+
+with open ("data.json", 'w', encoding='utf-8') as json_file:
+    json.dump(data, json_file, indent=4, ensure_ascii=False)
+
+
+room_finder.to_spread_sheet()
