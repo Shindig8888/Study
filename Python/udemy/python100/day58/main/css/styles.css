@@ -1,0 +1,201 @@
+/* Global */
+body {
+    font-family: "Montserrat";
+}
+
+.container-fluid {
+    padding: 3% 15% 7%;
+}
+
+.colored-section {
+    background-color: #ff4c68;
+}
+
+.white-section {
+    background-color: #fff;
+}
+
+
+/* Navigation Bar */
+.navbar-brand {
+    font-family: 'Ubuntu';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.nav-item {
+    padding: 0 15px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+/* Title */
+.subtitle {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: white;
+
+}
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+.iphone-img {
+    width: 20%;
+    transform: rotate(25deg);
+    position:absolute;
+    z-index: 1;
+    margin-left: 5%;
+    right: 20%;
+
+}
+
+@media (max-width: 1285px){
+    .iphone-img {
+        transform: rotate(0);
+        padding: 0;
+        margin-left: 0;
+        right:0;
+        width: 70%;
+        position:static;
+
+    }
+
+    #title {
+        text-align: center;
+    }
+    
+}
+
+
+/* Features */
+#features {
+    padding: 7% 15%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+.indicator-icon {
+    font-size: 5.5rem;
+    color: #ef8172;
+    margin-bottom: 1.5rem;
+}
+
+.indicator-icon:hover {
+    color: #ff4c68;
+}
+
+.feature-title {
+    font-weight: bolder;
+}
+
+.sub-explain {
+    margin-top: 5%;
+    color: #8f8f8f;
+}
+
+
+/* Testimonial */
+#testimonials {
+    background-color: #ef8172;
+    text-align: center;
+    color: #fff;
+}
+
+.testimonial-text {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.testimonial-image {
+    width: 10%;
+    border-radius: 200%;
+    margin: 20px;
+}
+
+.carousel-item {
+    padding: 8% 15%;
+}
+
+
+/* Press */
+#press {
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-image {
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+
+/* Pricing */
+#pricing {
+    text-align: center;
+    padding: 100px;
+}
+
+.price-card {
+    margin-bottom: 20px;
+    padding: 3% 2%;
+}
+.price-card .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+.card-body .btn {
+    margin-top: auto;
+}
+
+/* CTA */
+#cta {
+    text-align: center;
+    padding: 100px;
+}
+
+.cta-title {
+    font-size: 50px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10%;
+}
+
+.cta-download-button {
+    margin: 0 2%;
+}
+
+/* Footer */
+#footer {
+    margin: 10%;
+    text-align: center;
+}
+
+.footer-symbols {
+    margin:10px 10px;
+    color: black;
+}
+
+
+.copyright {
+    margin-top: 20px;
+}
