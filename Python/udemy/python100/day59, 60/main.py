@@ -27,6 +27,7 @@ def send_email(name, sender_email, phone_number, message):
 def home():
     return render_template("index.html", posts= blog_json)
 
+
 @app.route('/about')
 def about():
     return render_template("about.html")
