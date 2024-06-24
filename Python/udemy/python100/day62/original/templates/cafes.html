@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Cafes</h1>
+
+	  <table class="table table-dark table-striped table-hover">
+      {% from 'bootstrap5/table.html' import render_table %}
+
+      {{ render_table(cafes) }}
+  	  </table>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
